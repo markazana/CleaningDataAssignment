@@ -1,5 +1,8 @@
 ## Please change wd to ./UCI HAR Dataset
 
+## clean workspace first
+rm(list = ls())
+
 ## libraries used
 install.packages("dplyr")
 library("dplyr"); library("plyr");
@@ -33,7 +36,8 @@ test.full <- cbind(test.full,test.x)
 ## Combine training and test datasets
 intersect(names(train.full),names(test.full)) ## verification
 dataset.full <- rbind(train.full,test.full)
-dataset.mean_std <- dataset.full[,grepl("subject|activity|-mean..$|-std..$",colnames(dataset.full))]
+dataset.mean_std <- dataset.full[,grepl("subject|activity|-mean\\(\\)+(-[X-Z])?$|-std\\(\\)+(-[X-Z])?$",colnames(dataset.full))]
+names(dataset.mean_std)
 
 ## function to perform mean in lapply
 mean_this <- function(df) {
