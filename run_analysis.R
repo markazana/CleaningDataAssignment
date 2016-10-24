@@ -58,7 +58,7 @@ mean_this <- function(df) {
 
 ## Step 4.1 - calculate mean of each subset
 dataset.split <- split(select(dataset.mean_std,-(subject:activity)),list(dataset.mean_std$subject,dataset.mean_std$activity))
-dataset.splitMean <- lapply(dataset.split, FUN = mean_this)
+dataset.splitMean <- lapply(dataset.split, FUN = mean_this) ## possible to use ddply too
 
 ## Step 5 - function parse subsets back into data frame
 parse_this <- function() {

@@ -1,11 +1,5 @@
 ### Loading Instructions
 
-Please download and unzip the files on your computer.
-
-https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
-
-Change the working directory to "./UCI HAR Dataset" and place the run_analysis.R inside.
-
 Execute run_analysis.R and wait for it to complete. Then find cleaned_dataset.txt generated. 
 
 
