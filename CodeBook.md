@@ -10,13 +10,13 @@ Load training data into train.full variable
 Load testing data into test.full variable
 
 ###Step 3
-Combine training and test sets together into dataset.full, then extract only columns that end with mean()-? or std()-? into new dataset dataset.mean_std
+Combine training and test sets together into dataset.full
 
 ###Step 4
-Split dataset.mean_std dataset and use lapply to calculate means of each subset
+Extract only columns that end with mean()-? or std()-? into new dataset dataset.mean_std
 
 ###Step 5
-Loop and parse back values into dataset dataset.final
+Calculate mean and group by subject and activity values using ddply
 
 ###Step 6
 Write cleansed dataset into output txt file cleaned_dataset.txt
